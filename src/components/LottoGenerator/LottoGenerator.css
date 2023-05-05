@@ -1,0 +1,122 @@
+.LottoGenerator {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.zzal img{
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    font-size: 16px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+    background-color: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.numberSets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.numberSet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.setLabel {
+    margin-right: 10px;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    flex: 1;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.2s linear forwards, rolling 1s ease-in-out;
+}
+
+.number.number-one-to-ten {
+    background-color: #ffd700;
+}
+
+.number.number-eleven-to-twenty {
+    background-color: #007aff;
+}
+
+.number.number-twenty-one-to-thirty {
+    background-color: #ff3b30;
+}
+
+.number.number-thirty-one-to-forty {
+    background-color: #8e8e93;
+}
+
+.number.number-forty-one-to-forty-five {
+    background-color: #4cd964;
+}
+
+@keyframes rolling {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
