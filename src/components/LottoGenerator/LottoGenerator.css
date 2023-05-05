@@ -16,16 +16,17 @@ h1 {
     width: 100%;
 }
 
+.selectNumbers {
+    display: grid;
+    grid-template-columns: repeat(15, 0.5fr);
+    grid-gap: 5px;
+    padding: 10px 0px;
+}
+
 form {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-}
-
-label {
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: bold;
 }
 
 input[type="number"] {

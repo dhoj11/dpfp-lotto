@@ -1,11 +1,21 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import './LottoGenerator.css';
+import Checkbox from "./Checkbox";
 const zzal = require( '../../assets/images/zzal.png');
 
 function LottoGenerator() {
 
     const [numberOfSets, setNumberOfSets] = useState(1);
     const [lottoNumbers, setLottoNumbers] = useState<number[][]>([]);
+    const [selectedValues, setSelectedValues] = useState<number[]>([]);
+
+    const handleCheckboxChange = (value: number) => {
+        if (selectedValues.includes(value)) {
+            setSelectedValues(selectedValues.filter((v) => v !== value));
+        } else if (selectedValues.length < 6) {
+            setSelectedValues([...selectedValues, value]);
+        }
+    };
 
     function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
         const value = parseInt(event.target.value);
@@ -15,7 +25,9 @@ function LottoGenerator() {
     function generateNumbers(): number[] {
         const numbers: number[] = [];
 
-        while (numbers.length < 6) {
+        selectedValues.forEach(num=>numbers.push(num));
+
+        while (numbers.length < 6 ) {
             const number = Math.floor(Math.random() * 45) + 1;
 
             if (numbers.indexOf(number) === -1) {
@@ -60,9 +72,18 @@ function LottoGenerator() {
                     <img src={zzal}/>
                 </div>
             </header>
+            <div className="selectNumbers">
+                {Array.from({length: 45}, (_, i) => i + 1).map((value) => (
+                    <Checkbox
+                        key={value}
+                        isChecked={selectedValues.includes(value)}
+                        onChange={handleCheckboxChange}
+                        value={value}
+                    />
+                ))}
+            </div>
             <main>
                 <form onSubmit={handleSubmit}>
-                    {/*<label htmlFor="numberOfSets">셋트 수</label>*/}
                     <input
                         type="number"
                         id="numberOfSets"

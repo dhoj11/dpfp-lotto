@@ -1,0 +1,32 @@
+.circle_wrap{
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 1px solid black;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+input[type='checkbox']:checked + .circle {
+    background-color: black;
+    color: white;
+}
