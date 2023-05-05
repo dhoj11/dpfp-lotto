@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.cfa4c3f7.css",
-    "main.js": "/static/js/main.0e2326f3.js",
-    "static/media/zzal.png": "/static/media/zzal.bfb07f1425e98dbba340.png",
-    "index.html": "/index.html",
-    "main.cfa4c3f7.css.map": "/static/css/main.cfa4c3f7.css.map",
-    "main.0e2326f3.js.map": "/static/js/main.0e2326f3.js.map"
+    "main.css": "/dpfp-lotto/static/css/main.cfa4c3f7.css",
+    "main.js": "/dpfp-lotto/static/js/main.2228dc75.js",
+    "static/media/zzal.png": "/dpfp-lotto/static/media/zzal.bfb07f1425e98dbba340.png",
+    "index.html": "/dpfp-lotto/index.html",
+    "main.cfa4c3f7.css.map": "/dpfp-lotto/static/css/main.cfa4c3f7.css.map",
+    "main.2228dc75.js.map": "/dpfp-lotto/static/js/main.2228dc75.js.map"
   },
   "entrypoints": [
     "static/css/main.cfa4c3f7.css",
-    "static/js/main.0e2326f3.js"
+    "static/js/main.2228dc75.js"
   ]
 }
