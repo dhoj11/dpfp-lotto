@@ -18,7 +18,7 @@ h1 {
 
 .selectNumbers {
     display: grid;
-    grid-template-columns: repeat(15, 0.5fr);
+    grid-template-columns: repeat(15, 1fr);
     grid-gap: 5px;
     padding: 10px 0px;
 }
@@ -123,3 +123,11 @@ button[type="submit"] {
         transform: translateX(0);
     }
 }
+
+@media (max-width: 500px) {
+    .selectNumbers {
+        grid-template-columns: repeat(5, 1fr);
+        padding: 10px 50px;
+    }
+}
+
