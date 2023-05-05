@@ -83,8 +83,8 @@ function LottoGenerator() {
                                     key={number}
                                     className={`number number-${getColorClass(number)}`}
                                 >
-                {number}
-              </span>
+                                {number}
+                                </span>
                             ))}
                         </div>
                     ))}
